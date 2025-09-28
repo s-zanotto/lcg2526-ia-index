@@ -2,6 +2,19 @@ body {
   font-family: forma djr mono, aptos mono, Arial, sans-serif;
   background: #c9c4c487;
   text-align: center;
+min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient( /* sfondo a strisce verticali */
+    90deg,          /* direzione: 90° = strisce verticali */
+    #ffffff,        /* colore della prima striscia */
+    #ffffff 40px,   /* larghezza della prima striscia */
+    #f0f0f0 40px,   /* colore della seconda striscia */
+    #f0f0f0 80px    /* fine della seconda striscia */
+  );
 }
 
 h1 {
@@ -40,7 +53,7 @@ li {
   color: #000;
   border: 2px #000;
   border-radius: 50px;
-  background: #fff;
+  background: #b5cbb8;
   position: relative;
   transition: all 0.2s ease;
 }
