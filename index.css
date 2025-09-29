@@ -24,7 +24,7 @@
 }
 
 .navbar a:hover {
-  background: #b5cbb8;
+  background: #EF8354;
   transform: translateY(-3px);
   box-shadow: 0 4px 0 #000;
 }
@@ -47,16 +47,20 @@ min-height: 100vh;
   justify-content: center;
   background: repeating-linear-gradient( /* sfondo a strisce verticali */
     90deg,          /* direzione: 90° = strisce verticali */
-    #ffffff,        /* colore della prima striscia */
-    #ffffff 40px,   /* larghezza della prima striscia */
-    #f0f0f0 40px,   /* colore della seconda striscia */
-    #f0f0f0 80px    /* fine della seconda striscia */
+    #BCB8B1,        /* colore della prima striscia */
+    #BCB8B1 40px,   /* larghezza della prima striscia */
+    #F4F3EE 40px,   /* colore della seconda striscia */
+    #F4F3EE 80px    /* fine della seconda striscia */
   );
+}
+
+p {
+    font-size: 20px;
 }
 
 
 h1 {
-  margin-top: 120px;
+  margin-top: 150px;
   font-size: 100px;
   line-height: 0;
   margin-bottom: 0;
@@ -87,7 +91,7 @@ li {
 .griglia-bottone {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 90px;
+  gap: 50px;
   max-width: 800px;
   margin: 40px auto;
   padding: 0;
@@ -101,7 +105,7 @@ li {
   color: #000;
   border: 2px #000;
   border-radius: 50px;
-  background: #b5cbb8;
+  background: #EF8354; 
   position: relative;
   transition: all 0.2s ease;
 }
@@ -114,6 +118,29 @@ li {
 
 /* effetto "pressione" al click */
 .bottone:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #000;
+}
+
+.bottone-1 {
+  display: inline-block;
+  padding: 20px 40px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px #ffffff;
+  border-radius: 50px;
+  background: #43423e;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.bottone-1:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 0 #000000;
+}
+
+.bottone-1:active {
   transform: translateY(2px);
   box-shadow: 0 2px 0 #000;
 }
