@@ -1,12 +1,12 @@
 function setup() {
   createCanvas(600, 600);
-  angleMode(DEGREES);
-  noStroke();
+  angleMode(DEGREES); // angoli calcolati in gradi e non radianti
+  noStroke(); // non contorno di nessuna forma
 }
 
 function draw() {
-  background(30, 35, 48);
-  fill(255); // bianco
+  background("#fff2c2");
+  fill("#ED5485"); // bianco
   textSize(20); // per ingradire testo
   text("mouseX: " + mouseX + 
     "  |  mouseY: " + mouseY,20,20)
@@ -28,13 +28,16 @@ function draw() {
     push();
     rotate(i * 360 / petals);      // distribuisci i petali
     translate(petalDist, 0);       // sposta il petalo fuori dal centro
-    fill(220, 80 + i * 10 % 120, 140, 220);
+    fill(10, 80 + i * 10 % 120, 140, 220);
+      // colore rgba -> a sta per trasparenza
+      // il secondo valore g -> dipende dal numero del petalo i
+      // quindi ogni petalo ha una sfumatura diversa
     ellipse(0, 0, petalW, petalH);
     pop();
   }
 
   // centro del fiore
-  fill(245, 200, 60);
+  fill("#ED5485");
   ellipse(0, 0, 120, 120);
   pop();
 }
