@@ -4,9 +4,12 @@ let yMax = 600;
 let xrocket = xMax/2; // il razzone parte a metà foglio
 let yrocket = yMax*0.6;
 
+
+
 function setup() {
   createCanvas(xMax, yMax); // dimensioni canva
 }
+
 
 function draw() {
   background("#003399"); // colore background
@@ -17,7 +20,8 @@ function draw() {
     "  |  mouseY: " + mouseY,20,20)
 
 // stelle -> 120 di tre tipi (a, b, c)
-    push();
+    
+push();
     // ciclo 1 specifica stella a, 40
     // i=0 il -> ciclo inizia da 0
     // i < 40 -> il ciclo arrivo fino a 40 senza superare il  numero (compreso 40)
@@ -28,21 +32,25 @@ function draw() {
       // operatore modulo %
       // stella a quando i è pari
 
+    random_transparency = random(150, 255);
+    random_size = random(2.0, 5.0);
+  
+
       if ( i % 2 == 0 ){
         // stella a
-        fill(255,255,150);
+        fill(255,255,150, random_transparency);
         strokeWeight(0);
-        ellipse (starx, stary, 2);
+        ellipse (starx, stary, random_size);
       } else if( i % 3){
         // stella b c'è per ogni i divisibile per 3
-        fill ("#FFFFFF");
+        fill (200, 100, 255, random_transparency);
         strokeWeight(0);
-        ellipse(starx,stary,3.5)
+        ellipse(starx,stary, random_size)
       } else {
         // stella c
-        fill("#FFFF00");
+        fill(255, 255, 100, random_transparency);
         strokeWeight(0);
-        ellipse(starx,stary,4.8)
+        ellipse(starx,stary, random_size)
       }
     }
     pop();
