@@ -93,14 +93,23 @@ function draw() {
 
   let variazionescala = scalaDiBase * Math.abs(sin(tempo)); 
   // math.abs è il valore assoluto e quindi non diventa negativo saprendo
-  drawRocket(xRocket, yRocket, scalaB=1, ruota=30);
+  drawRocket(xRocket, yRocket, variazionescala, ruotaGlobale);
 
   drawStarsFromFile();
   drawRocket(xRocket, yRocket); 
 
   xRocket = (xRocket +1) % xMax;
   yRocket = moveRocket(yRocket); 
-  tempo += 1; 
+  // tempo += 1; 
 
 }
 
+function mousePressed(){
+  // fermiamo l'animazione o la rifacciamo partire se clicchiamo il mouse
+  noLoop(); // per fermare l'animazione
+  if(isLooping()){
+    noLoop();
+  }else{
+    loop();
+  }
+}
