@@ -8,10 +8,10 @@ let yRocket = yMax*0.6;
 let table;
 let star_img;
 
-function filterStarSize(value) {
+function isStarSizeValid(value) {
   // se il dato in ingresso è corretto o meno
   // restituire un boolenao
-  return
+  return value > 0;
 }
 
 
@@ -24,6 +24,13 @@ function preload() {
 function setup() {
   createCanvas(xMax, yMax);
   frameRate(30);
+  // filtrare i dati tramite isStarSizeValid 
+  for(let i=0; i < table.getRowCount(); i++){
+    let star_value = table.getNum(i, "starSize");
+    if(isStarSizeValid(star_value)){
+      stars_valid.push(star_value);
+    }
+  }
 }
 
 function drawStarsFromFile() {
